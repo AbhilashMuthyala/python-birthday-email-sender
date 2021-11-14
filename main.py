@@ -2,13 +2,13 @@
 import smtplib, datetime, pandas, random
 
 def send_email(msg):
-    my_email = 'abhilashm791@gmail.com'
-    password = '63207549'
+    my_email = '<email>'
+    password = '<password>'
     with smtplib.SMTP('smtp.gmail.com', port=587) as connection:
         connection.starttls()
         connection.login(user=my_email,password=password)
         connection.sendmail(from_addr=my_email,
-                        to_addrs="abhi6j5@gmail.com",
+                        to_addrs="<to_email>",
                         msg=f"Subject: Hello \n\n {msg}")
 
 def current_date():
